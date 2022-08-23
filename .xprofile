@@ -17,7 +17,7 @@ nm-applet &
 # Java Fonts
 xsettingsd &
 # Wallpaper
-feh --bg-scale ~/Pictures/Wallpapers/pexels-sebastiaan-stam-1480690.jpg &
+feh --bg-scale ~/Pictures/Wallpapers/YOUR_WALLPAPER.jpg &
 # Overlay Bar
 #xob-pulse-py | xob -s pulse &
 #xob-brightness-js | xob -s brightness &
