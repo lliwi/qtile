@@ -3,23 +3,14 @@ Qtile config
 # Índice 
 - [Resumen](#resumen) 
 - [Paquetes base](#paquetes-base) 
-
 - [Gestor de ventanas](#gestor-de-ventanas) 
-
 - [Fuentes](#fuentes) 
-
--[Configuración X](#configuracion-x) 
-
--[Personalizando qtile](#personalizando-qtile) 
-
+- [Configuración X](#configuracion-x) 
+- [Personalizando qtile](#personalizando-qtile) 
 - [Menú](#menu) 
-
 - [Shell](#shell) 
-
 - [GTK](#gtk) 
-
 - [GDM](#gdm) 
-
 
 # Resumen 
 Esta es una guía para la configuración de Qtail partiendo de una instalación de Arch Linux como base. 
