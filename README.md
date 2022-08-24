@@ -90,7 +90,7 @@ Lo abriremos con un editor de texto y modificaremos la siguiente línea indicand
 feh --bg-scale ~/Pictures/Wallpapers/YOUR_WALLPAPER.jpg & 
 
 ``` 
-#Keybindings
+# Keybindings
 ![Qtile](images/keys_mod.png)
 
 | Key                     | Action                           |
