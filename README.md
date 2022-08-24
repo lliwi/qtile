@@ -1,4 +1,4 @@
-![Qtile](screenshot.png)
+![Qtile](images/screenshot.png)
 
 # Índice 
 - [Resumen](#resumen) 
@@ -7,6 +7,7 @@
 - [Fuentes](#fuentes) 
 - [Configuración X](#configuracion-x) 
 - [Personalizando qtile](#personalizando-qtile) 
+- [Keybindings](#keybindings)
 - [Menú](#menu) 
 - [Shell](#shell) 
 - [GTK](#gtk) 
@@ -89,6 +90,33 @@ Lo abriremos con un editor de texto y modificaremos la siguiente línea indicand
 feh --bg-scale ~/Pictures/Wallpapers/YOUR_WALLPAPER.jpg & 
 
 ``` 
+#Keybindings
+![Qtile](images/keys_mod.png)
+
+| Key                     | Action                           |
+| ----------------------- | -------------------------------- |
+| **mod + j**             | next window (down)               |
+| **mod + u**             | next window (up)                 |
+| **mod + h**             | next window (left)               |
+| **mod + k**             | next window (right)              |
+| **mod + tab**           | change layout                    |
+| **mod + [1-9]**         | Switch to workspace N (1-9)      |
+| **mod + shift + [1-9]** | Send Window to workspace N (1-9) |
+| **mod + period**        | Focus next monitor               |
+| **mod + comma**         | Focus previous monitor           |
+| **mod + w**             | kill window                      |
+| **mod + ctrl + r**      | restart wm                       |
+| **mod + ctrl + q**      | quit                             |
+| **mod + m**             | manu                             |
+| **mod + b**             | Firexofx                         |
+| **mod + return**        | Terminal                         |
+| **mod + e**             | File explorer                    |
+| **mod + r**             | Red shift                        |
+| **mod + s**             | Screenshot                       |
+
+![Qtile](images/keys_mod_shift.png)
+![Qtile](images/keys_mod_ctl.png)
+![Qtile](images/keys_mod_shift_ctl.png)
 
 # Menú 
 Ahora podemos ejecutar rofi, que será el menú para poder lanzar aplicaciones. Lo podemos realizar presionando [windows]+[m]. 
