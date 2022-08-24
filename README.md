@@ -1,5 +1,5 @@
 Qtile config 
-![Qtile](sceenshot.png)
+![Qtile](screenshot.png)
 
 # Índice 
 - [Resumen](#resumen) 
