@@ -1,4 +1,3 @@
-Qtile config 
 ![Qtile](screenshot.png)
 
 # Índice 
