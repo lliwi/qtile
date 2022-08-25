@@ -15,6 +15,7 @@
 
 # Resumen 
 Esta es una guía para la configuración de Qtail partiendo de una instalación de Arch Linux como base. 
+Para las configuraciones se ha tomado como referencia las propuestas por Antonio Sarosi en su [github](https://github.com/antoniosarosi/dotfiles). 
 
 #Paquetes base 
 Una vez disponemos del sistema base instalaremos los siguientes paquetes para poder posteriormente iniciar una sesión gráfica y trabajar con mayor facilidad. Para ello haremos uso del gestor de paquetes de Arch pacman. 
@@ -91,6 +92,9 @@ feh --bg-scale ~/Pictures/Wallpapers/YOUR_WALLPAPER.jpg &
 
 ``` 
 # Keybindings
+
+En este tipo de sistemas una de las partes más importantes es la de crear atajos de teclado que nos ayuden a agilizar las operaciones del sistema, ya sea para manejo de ventanas como para la ejecución de programas. 
+A continuación, las propuestas por mi parte, aunque estas son completamente configurables desde el fichero./config/qtiles/settings/keys.py. 
 ![Qtile](images/keys_mod.png)
 
 | Key                     | Action                           |
