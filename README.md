@@ -151,7 +151,7 @@ rofi-theme-selector
 ``` 
 
 #Shell 
-Para la shell usemos alacritty, de la que ya hemos copiado su configuracion durante la personalizacición de qtile. 
+Para la shell usemos alacritty, de la que ya hemos copiado su configuracion durante la personalización de qtile. 
 Personalizaremos la shell con oh-my-zsh, para instalarlo realizaremos los siguientes pasos. 
 Establecemos zsh como interprete por defecto. 
 ``bash 
