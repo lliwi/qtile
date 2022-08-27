@@ -23,7 +23,7 @@ Una vez disponemos del sistema base instalaremos los siguientes paquetes para po
 ```bash 
 pacman -S networkmanager wpa_supplicant nano neovim bat exa git which wget p7zip python-pip xrog xorg-server 
 ``` 
-Una vez instalados iniciaremos los servicios de red para disponer de ella cuando reiníciennos. 
+Una vez instalados iniciaremos los servicios de red para disponer de ella cuando reiniciemos. 
 ```bash 
 systemctl enable NetworkManager 
 systemctl enable wpa_supplicant 
@@ -64,7 +64,7 @@ En este punto podemos reiniciar para entrar por primera vez en qtile, en su conf
 # Configuración X 
 En este punto posiblemente la resolución no sea la adecuada o el sistema no haya detectado el número de monitores de que disponemos. 
 Para ayudarnos en la configuración de las X usaremos **arandr**, lo ejecutaremos desde una terminal presionando la tecla [windows] + [enter]. 
-Desde su interfaz grafico podemos confgigurar los monitores, aplicar los cambios para la sesión y guardar la configuración que usaremos a continuación en nuestro fichero .xprofile. 
+Desde su interfaz grafico podemos configurar los monitores, aplicar los cambios para la sesión y guardar la configuración que usaremos a continuación en nuestro fichero .xprofile. 
 
 #Personalizando qtile 
 Lo primero que debemos realizar es clonar el repositorio con las configuraciones. 
@@ -153,7 +153,7 @@ rofi-theme-selector
 #Shell 
 Para la shell usemos alacritty, de la que ya hemos copiado su configuracion durante la personalizacición de qtile. 
 Personalizaremos la shell con oh-my-zsh, para instalarlo realizaremos los siguientes pasos. 
-Establacemos zsh como interprete por defecto. 
+Establecemos zsh como interprete por defecto. 
 ``bash 
 chsh -s $(which zsh) 
 ``` 
@@ -194,7 +194,7 @@ cp –r thems/gtk/ara /usr/share/icons
 cp –r thems/cursor/Breeze /usr/share/icons 
 cp –r thems/gtk/ARK-Dark /usr/share/themes 
 ``` 
-Instalamos el paquete cxb-util-curson para que nos permita modificar el corsor. 
+Instalamos el paquete cxb-util-curson para que nos permita modificar el cursor.
 ``bash 
 sudo pacman -S xcb-util-cursor 
 ``` 
