@@ -4,7 +4,7 @@
 
 # Qtile workspaces
 
-from libqtile.config import Key, Group
+from libqtile.config import Key, Group, Match
 from libqtile.command import lazy
 from .keys import mod, keys
 
@@ -20,9 +20,15 @@ from .keys import mod, keys
 # nf-mdi-image, 
 # nf-mdi-layers
 
-groups = [Group(i) for i in [
-    "   ", "   ", "   ", "   ","  "," ﳳ ", "   ",
-]]
+groups = [
+    Group('   ', position=1),
+    Group('   ',  position=2),
+    Group('   ',  position=3),
+    Group('   ',  position=4),
+    Group(' ﱘ  ',  position=5),
+    Group(' ﳳ  ',  position=6, matches=[Match(title=["Enpass"]),Match(wm_class=["authy desktop"])]),
+    Group('   ',  position=7),
+        ]
 
 for i, group in enumerate(groups):
     actual_key = str(i + 1)

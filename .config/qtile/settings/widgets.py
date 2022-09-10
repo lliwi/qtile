@@ -1,4 +1,5 @@
 from libqtile import widget
+from libqtile.command import lazy
 from .theme import colors
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
@@ -22,6 +23,14 @@ def icon(fg='text', bg='dark', fontsize=16, text="?"):
         padding=3
     )
 
+def poweroff(fg='text', bg='dark', fontsize=16, text="?"):
+    return widget.TextBox(
+        **base(fg, bg),
+        fontsize=fontsize,
+        text=text,
+        mouse_callbacks={'Button1':lazy.shutdown()},
+        padding=3
+    )
 
 def powerline(fg="light", bg="dark"):
     return widget.TextBox(
@@ -63,6 +72,8 @@ def workspaces():
 
 
 primary_widgets = [
+    icon(fg='blue', text=' '),
+
     *workspaces(),
 
     separator(),
@@ -102,9 +113,14 @@ primary_widgets = [
     powerline('dark', 'color1'),
 
     widget.Systray(background=colors['dark'], padding=5),
+
+    poweroff(fg='blue', text=' '),
+    
 ]
 
 secondary_widgets = [
+    icon(fg='blue', text=' '),
+    
     *workspaces(),
 
     separator(),
