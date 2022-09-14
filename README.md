@@ -149,9 +149,9 @@ Ahora podemos ejecutar rofi, que será el menú para poder lanzar aplicaciones. 
 Para personalizarlo podemos ejecutar desde una shell el siguiente comando, que nos permitirá seleccionar el tema. 
 ```bash 
 rofi-theme-selector 
-``` 
+```
 
-#Shell 
+# Shell 
 Para la shell usemos alacritty, de la que ya hemos copiado su configuracion durante la personalización de qtile. 
 Personalizaremos la shell con oh-my-zsh, para instalarlo realizaremos los siguientes pasos. 
 Establecemos zsh como interprete por defecto. 
@@ -180,14 +180,17 @@ alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first' 
 alias cat='bat --style plain --paging never' 
 alias tree='exa -T' 
-``` 
+```
 Al iniciar una nueva terminal nos tendría que aparecer el wizard que nos guiará para la configuración de oh-my-zsh.  
 En este punto, si le queremos dar transparencia a la shell o a cualquier otra aplicación lo podemos realizar con la herramienta picom. 
-Añadiremos al fichero /etc/xdg/picom.conf la siguinete linea: 
-+ opacity-rule = [ "90:class_g = 'Alacritty'" ]; 
+Añadiremos al fichero /etc/xdg/picom.conf la siguinete linea:
+```text
++ opacity-rule = [ "90:class_g = 'Alacritty'" ];
+```
 Si queremos redondear las esquinas de nuestras ventas lo podemos realizar añadiendo la siguiente línea al mismo fichero de configuración. 
-+ opacity-rule = [ "90:class_g = 'Alacritty'" ]; 
-
+```text
++ opacity-rule = [ "90:class_g = 'Alacritty'" ];
+```
 # Notificaciónes
 Me gusta tener notificaciones en el escritorio también, para ello tienes que instalar [**libnotify**](https://wiki.archlinux.org/index.php/Desktop_notifications#Libnotify) y [**notification-daemon**](https://www.archlinux.org/packages/community/x86_64/notification-daemon/):
 
