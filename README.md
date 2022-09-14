@@ -8,7 +8,8 @@
 - [Configuración X](#configuracion-x) 
 - [Personalizando qtile](#personalizando-qtile) 
 - [Keybindings](#keybindings)
-- [Menú](#menu) 
+- [Menú](#menu)
+- [Notificaciónes](#notificaciones) 
 - [Shell](#shell) 
 - [GTK](#gtk) 
 - [GDM](#gdm) 
@@ -186,6 +187,30 @@ Añadiremos al fichero /etc/xdg/picom.conf la siguinete linea:
 + opacity-rule = [ "90:class_g = 'Alacritty'" ]; 
 Si queremos redondear las esquinas de nuestras ventas lo podemos realizar añadiendo la siguiente línea al mismo fichero de configuración. 
 + opacity-rule = [ "90:class_g = 'Alacritty'" ]; 
+
+# Notificaciónes
+Me gusta tener notificaciones en el escritorio también, para ello tienes que instalar [**libnotify**](https://wiki.archlinux.org/index.php/Desktop_notifications#Libnotify) y [**notification-daemon**](https://www.archlinux.org/packages/community/x86_64/notification-daemon/):
+
+```bash
+sudo pacman -S libnotify notification-daemon
+```
+
+En nuestro caso, [esto es lo que tenemos que hacer para tener notificaciones](https://wiki.archlinux.org/index.php/Desktop_notifications#Standalone):
+
+```bash
+# Crea este fichero con nano o vim
+sudo nano /usr/share/dbus-1/services/org.freedesktop.Notifications.service
+# Pega estas líneas
+[D-BUS Service]
+Name=org.freedesktop.Notifications
+Exec=/usr/lib/notification-daemon-1.0/notification-daemon
+```
+
+Pruébalo:
+
+```bash
+notification-send "Hola Mundo"
+```
 
 #GTK 
 Ahora nos podemos poner con el tema del gestor de ficheros, simplemente tenemos que copiar las carpetas proporcionadas con la configuración a las carpetas correspondientes según sean iconos, temas o cursores. 
