@@ -70,6 +70,9 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Terminal
     ([mod], "Return", lazy.spawn("alacritty")),
 
+    # Info panel
+    ([mod], "c", lazy.spawn("conky")),
+
     # Redshift
     ([mod], "r", lazy.spawn("redshift -O 2400")),
     ([mod, "shift"], "r", lazy.spawn("redshift -x")),

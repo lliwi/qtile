@@ -1,5 +1,4 @@
 from libqtile import widget
-from libqtile.command import lazy
 from .theme import colors
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
@@ -23,14 +22,6 @@ def icon(fg='text', bg='dark', fontsize=16, text="?"):
         padding=3
     )
 
-def poweroff(fg='text', bg='dark', fontsize=16, text="?"):
-    return widget.TextBox(
-        **base(fg, bg),
-        fontsize=fontsize,
-        text=text,
-        mouse_callbacks={'Button1':lazy.shutdown()},
-        padding=3
-    )
 
 def powerline(fg="light", bg="dark"):
     return widget.TextBox(
@@ -72,8 +63,6 @@ def workspaces():
 
 
 primary_widgets = [
-    icon(fg='blue', text=' '),
-
     *workspaces(),
 
     separator(),
@@ -89,17 +78,7 @@ primary_widgets = [
         no_update_string='0',
         display_format='{updates}',
         update_interval=1800,
-        custom_command='pacman -Qu',
-    ),
-    icon(bg="color4", text='|'),
-    widget.CheckUpdates(
-        background=colors['color4'],
-        colour_have_updates=colors['text'],
-        colour_no_updates=colors['text'],
-        no_update_string='0',
-        display_format='{updates}',
-        update_interval=1800,
-        custom_command='paru -Qu',
+        custom_command='checkupdates',
     ),
 
     powerline('color3', 'color4'),
@@ -118,19 +97,14 @@ primary_widgets = [
 
     icon(bg="color1", fontsize=17, text=' '), # Icon: nf-mdi-calendar_clock
 
-    widget.Clock(**base(bg='color1'), format='%d/%m/%Y   %H:%M '),
+    widget.Clock(**base(bg='color1'), format='%d/%m/%Y - %H:%M '),
 
     powerline('dark', 'color1'),
 
     widget.Systray(background=colors['dark'], padding=5),
-
-    poweroff(fg='blue', text=' '),
-    
 ]
 
 secondary_widgets = [
-    icon(fg='blue', text=' '),
-    
     *workspaces(),
 
     separator(),
@@ -147,7 +121,6 @@ secondary_widgets = [
 
     powerline('dark', 'color2'),
 ]
-
 
 widget_defaults = {
     'font': 'UbuntuMono Nerd Font Bold',

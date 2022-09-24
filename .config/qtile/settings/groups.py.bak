@@ -3,7 +3,8 @@
 # https://github.com/antoniosarosi/dotfiles
 
 # Qtile workspaces
-from libqtile.config import Key, Group, Match
+
+from libqtile.config import Key, Group
 from libqtile.command import lazy
 from .keys import mod, keys
 
@@ -19,15 +20,9 @@ from .keys import mod, keys
 # nf-mdi-image, 
 # nf-mdi-layers
 
-groups = [
-    Group('   ', position=1),
-    Group('   ',  position=2),
-    Group('   ',  position=3),
-    Group('   ',  position=4),
-    Group(' 磊  ',  position=5, matches=[Match(wm_class=["vlc"]),Match(wm_class=["spotify"])]),
-    Group('   ',  position=6, matches=[Match(wm_class=["Enpass"]),Match(wm_class=["authy desktop"])]),
-    Group('   ',  position=7),
-        ]
+groups = [Group(i) for i in [
+    "   ", "   ", "   ", "   "," ﱘ  "," ﳳ  ", "   ",
+]]
 
 for i, group in enumerate(groups):
     actual_key = str(i + 1)
@@ -37,4 +32,3 @@ for i, group in enumerate(groups):
         # Send window to workspace N
         Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
     ])
-

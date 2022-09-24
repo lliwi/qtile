@@ -37,6 +37,8 @@ floating_layout = layout.Floating(
         Match(wm_class='maketag'),
         Match(wm_class='ssh-askpass'),
         Match(wm_class='pavucontrol'),
+        Match(wm_class='Conky'),
+         Match(wm_class='skype'),
         Match(title='branchdialog'),
         Match(title='pinentry'),
     ],
